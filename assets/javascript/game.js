@@ -1,4 +1,5 @@
 const gemGuess = {
+
   score: 0,
   total: 0,
   wins: 0,
@@ -8,74 +9,64 @@ const gemGuess = {
   gem03: 0,
   gem04: 0,
 
-  playGame: function() {
+  startGame: function() {
 
-    this.total = Math.floor((Math.random() * 100) + 21);
+    this.total = Math.floor((Math.random() * 100) + 20);
     this.score = 0;
-    this.gem01 = Math.floor((Math.random() * 10) + 1);
-    this.gem02 = Math.floor((Math.random() * 10) + 1);
-    this.gem03 = Math.floor((Math.random() * 10) + 1);
-    this.gem04 = Math.floor((Math.random() * 10) + 1);
+    this.gem01 = Math.floor((Math.random() * 12) + 1);
+    this.gem02 = Math.floor((Math.random() * 12) + 1);
+    this.gem03 = Math.floor((Math.random() * 12) + 1);
+    this.gem04 = Math.floor((Math.random() * 12) + 1);
+    $("#score").text(this.score);
+    $("#total").text(this.total);
+  },
 
-    const round = () => {
+  checkWin: function() {
 
-      var gemPicked = '';
-
-      // $("#one").on("click", function() {
-      //   gemPicked = '1';
-      // });
-      //
-      // $("#two").on("click", function() {
-      //   gemPicked = '2';
-      // });
-      //
-      // $("#three").on("click", function() {
-      //   gemPicked = '3';
-      // });
-      //
-      // $("#four").on("click", function() {
-      //   gemPicked = '4';
-      // });
-
-      switch (gemPicked) {
-        case '1':
-          this.score += this.gem01;
-          break;
-        case '2':
-          this.score += this.gem01;
-          break;
-        case '3':
-          this.score += this.gem01;
-          break;
-        case '4':
-          this.score += this.gem01;
-          break;
-        default:
-          alert('ERROR')
-          break;
-      }
-      if (this.total === this.score) {
-        alert("You WIN!~");
-        this.wins++;
-      } else if (this.score > this.total) {
-        alert("You LOST!~");
-        this.losses++;
-      }
+    if (this.total === this.score) {
+      alert("You WIN!~");
+      this.wins++;
+      $("#wins").text(this.wins);
+      this.startGame();
+    } else if (this.score > this.total) {
+      alert("You LOSE!~");
+      this.losses++;
+      $("#losses").text(this.losses);
+      this.startGame();
     }
-
-    do {
-      round();
-    } while (this.score < this.total);
   }
 }
 
-gemGuess.playGame();
+$(document).ready(function() {
 
-// console.log(gemGuess.total);
-// console.log(gemGuess.score);
-// console.log(gemGuess.gem01);
-// console.log(gemGuess.gem02);
-// console.log(gemGuess.gem03);
-// console.log(gemGuess.gem04);
-// console.log(gemGuess.wins);
-// console.log(gemGuess.losses);
+  gemGuess.startGame();
+
+  $("#total").text(gemGuess.total);
+  $("#score").text(gemGuess.score);
+  $("#wins").text(gemGuess.wins);
+  $("#losses").text(gemGuess.losses);
+
+  $("#one").on("click", function() {
+    gemGuess.score += gemGuess.gem01;
+    $("#score").text(gemGuess.score);
+    gemGuess.checkWin();
+  });
+
+  $("#two").on("click", function() {
+    gemGuess.score += gemGuess.gem02;
+    $("#score").text(gemGuess.score);
+    gemGuess.checkWin();
+  });
+
+  $("#three").on("click", function() {
+    gemGuess.score += gemGuess.gem03;
+    $("#score").text(gemGuess.score);
+    gemGuess.checkWin();
+  });
+
+  $("#four").on("click", function() {
+    gemGuess.score += gemGuess.gem04;
+    $("#score").text(gemGuess.score);
+    gemGuess.checkWin();
+  });
+});

@@ -1,0 +1,53 @@
+body {
+  background-image: url("../images/crossline-lines.png");
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+#header {
+  color: teal;
+  margin: 25px;
+  padding: 25px;
+  font-size: 60px;
+}
+
+p {
+  font-size: 20px;
+  margin: 25px;
+  color: #00449e;
+}
+
+#rules {
+  padding-bottom: 60px;
+}
+
+h2 {
+  color: #d5008f;
+}
+
+#total {
+  text-align: center;
+  font-size: 36px;
+  color: #a463f2;
+  padding-bottom: 50px;
+}
+
+#score {
+  text-align: center;
+  font-size: 36px;
+  color: #a463f2;
+  padding-bottom: 50px;
+}
+
+#wins {
+  text-align: center;
+  font-size: 36px;
+  color: #a463f2;
+  padding-bottom: 50px;
+}
+
+#losses {
+  text-align: center;
+  font-size: 36px;
+  color: #a463f2;
+  padding-bottom: 50px;
+}

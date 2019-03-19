@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
 
 <body>
 
@@ -17,8 +18,10 @@
     <h1 id="header">Crystal Collector</h1>
   </div>
   <div class="row">
-    <div class="col-md-12">
-      <div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-md-10">
+      <div id="rules">
         <p>You will be given a random number at the start of the game.</p>
         <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. </p>
         <p> You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
@@ -29,37 +32,59 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">Random Number:
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-3">
+      <h2>Random Number: </h2>
       <div id="total">
       </div>
     </div>
-    <div class="col-md-3">Your total score:
+    <div class="col-md-3">
+      <h2>Your total score: </h2>
       <div id="score">
       </div>
     </div>
-    <div class="col-md-3">Wins:
+    <div class="col-md-2">
+      <h2>Wins: </h2>
       <div id="wins">
       </div>
     </div>
-    <div class="col-md-3">Losses:
+    <div class="col-md-2">
+      <h2>Losses: </h2>
       <div id="losses">
+      </div>
+      <div class="col-md-1">
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-1">
       <button>
-        <img src="assets/images/gem01.jpg" alt="gem01" id="one">
+        <img src="assets/images/gem01.jpg" style="width: 100px; height: 150px;" alt="gem01" id="one">
       </button>
+    </div>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-1">
       <button>
-        <img src="assets/images/gem02.jpg" alt="gem02" id="two">
+        <img src="assets/images/gem02.jpg" style="width: 100px; height: 150px;" alt="gem02" id="two">
       </button>
+    </div>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-1">
       <button>
-        <img src="assets/images/gem03.jpg" alt="gem03" id="three">
+        <img src="assets/images/gem03.jpg" style="width: 100px; height: 150px;" alt="gem03" id="three">
       </button>
+    </div>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-1">
       <button>
-        <img src="assets/images/gem04.jpg" alt="gem04" id="four">
+        <img src="assets/images/gem04.jpg" style="width: 100px; height: 150px;" alt="gem04" id="four">
       </button>
     </div>
   </div>
